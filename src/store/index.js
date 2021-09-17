@@ -1,10 +1,9 @@
 import { createStore } from 'vuex'
-import axios from "axios";
+import axios from "../axios"
 
 export default createStore({
   state: {
     foundCountryList: [],
-    API_URL: "https://restcountries.eu/rest/v2/",
     darkMode: false
   },
   getters:{
@@ -24,24 +23,24 @@ export default createStore({
     },
   },
   actions: {
-      getAllCountry({ state, commit }){
-        axios.get(`${state.API_URL}all`)
+      getAllCountry({ commit }){
+        axios.get("/all")
             .then((res) => {
                 commit("SET_COUNTRY_LIST", res.data)
             });
       },
       //by country
-      getByCountryName({ state, commit, dispatch}, countryName){
+      getByCountryName({ commit, dispatch}, countryName){
         if (countryName == "") {
             dispatch("getAllCountry")
         }
-        axios.get(`${state.API_URL}name/${countryName}`).then((res) => {
+        axios.get(`name/${countryName}`).then((res) => {
             commit("SET_COUNTRY_LIST", res.data)
         });
       },
       //by region
-      getByRegionName({ state, commit }, regionName){
-        axios.get(`${state.API_URL}region/${regionName}`).then((res) => {
+      getByRegionName({ commit }, regionName){
+        axios.get(`region/${regionName}`).then((res) => {
             commit("SET_COUNTRY_LIST", res.data)
           });
       },

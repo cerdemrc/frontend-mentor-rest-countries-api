@@ -1,6 +1,9 @@
 # 🚀 Frontend Mentor - Countries API 
 
 #### A repo for people to collaborate on a frontend mentor challenge - "REST Countries API with color theme switcher"
+<strong>Used Techs:</strong> Vue 3, Composition Api, Vuex 4, Vue-Router, SCSS, Axios, Rest API
+#### [Live Demo](https://frontend-mentor-countries-api.vercel.app/)
+
 
 ![Design preview for the REST Countries API with color theme switcher coding challenge](./design/desktop-preview.jpg)
 

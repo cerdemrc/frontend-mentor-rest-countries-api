@@ -17,6 +17,41 @@ $light-input: hsl(0, 0%, 52%);
 //Light Mode Background
 $light-bg:  hsl(0, 0%, 98%);
 
+//mode
+.dark{
+    &-text{
+        color: $dark-text;
+    }
+    &-element{
+        background: $dark-element;
+    }
+    &-bg{
+        background: $dark-bg;
+    }
+    &-button{
+        border: 1px solid rgba(255, 255, 255, 0.151);
+        color: $dark-text;
+    }
+}
+
+.light{
+    &-text{
+        color: $light-text;
+    }
+    &-element{
+        background: $light-element;
+    }
+    &-bg{
+        background: $light-bg;
+    }
+    &-input{
+        color: $light-input;
+    }
+    &-button{
+        border: 1px solid rgba(0, 0, 0, 0.151);
+        color: $light-text;
+    }
+}
 
 
 

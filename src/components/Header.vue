@@ -1,11 +1,21 @@
 <template>
-  <div class="country-app-wrapper">
+  <div
+    class="country-app-wrapper"
+    :class="darkMode ? 'dark-element' : 'light-element'"
+  >
     <div class="container-lg container-md container-sm">
-      <div class="country-app-header">
+      <div
+        class="country-app-header"
+        :class="darkMode ? 'dark-text' : 'light-text'"
+      >
         <h1>Where in the world?</h1>
-        <a href="#" @click="changeMode">
+        <a
+          href="#"
+          @click="changeMode"
+          :class="darkMode ? 'dark-text' : 'light-text'"
+        >
           <span v-if="!darkMode">
-            <ion-icon class="mode-icon" name="moon-outline"> </ion-icon>
+            <ion-icon class="mode-icon" name="moon-outline"></ion-icon>
             Dark Mode
           </span>
           <span v-else>
@@ -19,11 +29,21 @@
 </template>
 
 <script>
-import Header from "../composables/Header";
+import { computed } from "vue";
+import { useStore } from "vuex";
 export default {
   name: "Header",
   setup() {
-    const { darkMode, changeMode } = Header();
+    const store = useStore();
+
+    const darkMode = computed(() => {
+      return store.getters.getMode;
+    });
+
+    const changeMode = () => {
+      store.commit("SET_MODE");
+    };
+
     return {
       darkMode,
       changeMode,

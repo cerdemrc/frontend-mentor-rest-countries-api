@@ -25,8 +25,13 @@ export default {
       return store.getters.getFoundCountryList;
     });
 
+    const darkMode = computed(() => {
+      return store.getters.getMode;
+    });
+
     return {
       foundCountryList,
+      darkMode,
     };
   },
 };

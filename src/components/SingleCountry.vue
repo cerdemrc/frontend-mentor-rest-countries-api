@@ -1,15 +1,18 @@
 <template>
-  <div class="main-cage">
+  <div class="main-cage" :class="darkMode ? 'dark-bg' : 'light-bg'">
     <Header />
     <div class="container-lg container-md container-sm">
       <div class="back-button" @click="this.$router.go(-1)">
-        <a href="#"
+        <a href="#" :class="darkMode ? 'dark-button' : 'light-button'"
           ><ion-icon class="arrow-icon" name="arrow-back-outline"></ion-icon>
           Back</a
         >
       </div>
       <div class="single-country">
-        <div class="single-country-infos">
+        <div
+          class="single-country-infos"
+          :class="darkMode ? 'dark-text' : 'light-text'"
+        >
           <div class="single-country-infos-flag">
             <img :src="countryInfos.flag" />
           </div>
@@ -91,8 +94,13 @@ export default {
       return store.getters.getFoundCountryList[0];
     });
 
+    const darkMode = computed(() => {
+      return store.getters.getMode;
+    });
+
     return {
       countryInfos,
+      darkMode,
     };
   },
 };

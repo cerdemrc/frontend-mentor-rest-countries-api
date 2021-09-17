@@ -1,6 +1,5 @@
 .country-app {
     &-wrapper {
-      background: $dark-text;
       width: 100%;
       padding: 1.8rem 0;
     }
@@ -8,7 +7,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      color: $light-text;
+
   
       & h1 {
         font-size: 2.5rem;
@@ -17,7 +16,6 @@
       & a {
         font-size: 1.4rem;
         font-weight: 600;
-        color: $light-text;
         & span {
           display: flex;
           align-items: center;

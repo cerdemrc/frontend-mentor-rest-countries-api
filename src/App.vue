@@ -1,6 +1,6 @@
-<template>
-  <router-view />
-</template>
+<template><router-view /></template>
 
 <style lang="scss">
 </style>
+
+

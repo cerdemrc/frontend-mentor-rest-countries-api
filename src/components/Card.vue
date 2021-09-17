@@ -1,5 +1,10 @@
 <template>
-  <a href="#" class="country-app-card" v-if="country">
+  <router-link
+    :to="country.name"
+    tag="a"
+    class="country-app-card"
+    v-if="country"
+  >
     <div class="country-app-card-image">
       <img :src="country.flag" />
     </div>
@@ -9,7 +14,7 @@
       <h4><strong>Region:</strong> {{ country.region }}</h4>
       <h4><strong>Capital:</strong> {{ country.capital }}</h4>
     </div>
-  </a>
+  </router-link>
 </template>
 
 <script>

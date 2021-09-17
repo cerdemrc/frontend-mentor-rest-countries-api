@@ -1,6 +1,5 @@
 <template>
   <SingleCountry />
-  <!--<router-view />-->
 </template>
 
 <script>

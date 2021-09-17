@@ -1,24 +1,26 @@
-# rest-countries-api
+# 🚀 Frontend Mentor - Countries API 
 
-## Project setup
-```
-npm install
-```
+#### A repo for people to collaborate on a frontend mentor challenge - "REST Countries API with color theme switcher"
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+![Design preview for the REST Countries API with color theme switcher coding challenge](./design/desktop-preview.jpg)
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Welcome! 👋
+[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
 
-### Lints and fixes files
-```
-npm run lint
-```
+## The challenge
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+The app integrates with [REST Countries API](https://restcountries.eu) to pull country data.
+
+Features of the app:
+
+- See all countries from the API on the homepage
+- Search for a country using an `input` field
+- Filter countries by region
+- Click on a country to see more detailed information on a separate page
+- Click through to the border countries on the detail page
+- Toggle the color scheme between light and dark mode
+
+<hr/>
+<p align="center">
+Developed with ❤️
+</p>

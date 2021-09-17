@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body{
+    font-size: 10px;
+    font-family: 'Nunito Sans', sans-serif;
+    word-spacing: 1px;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container-lg{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+input, select{
+    border-radius: 5px;
+    box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.05);
+    outline: none;
+    border: none;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.col-lg{
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 5rem;
+}
+
+@media screen and (max-width: 768px){
+    .col-md{
+        grid-template-columns: auto auto;
+        grid-gap: 3rem;
+    }
+    .container-md{
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 415px){
+    .col-sm{
+        grid-template-columns: auto;
+        grid-gap: 5rem;
+    }
+    .container-sm{
+        max-width: 375px;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+}

@@ -1,18 +1,34 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="main-cage">
+    <Header />
+    <Input />
+    <CardList />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Header from "../components/Header.vue";
+import Input from "../components/Input.vue";
+import CardList from "../components/CardList.vue";
+import { useStore } from "vuex";
+import { onMounted } from "vue";
 
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+  components: { Header, Input, CardList },
+  setup() {
+    const store = useStore();
+
+    onMounted(() => {
+      store.dispatch("getAllCountry");
+    });
+  },
+};
 </script>
+
+<style lang="scss">
+.main-cage {
+  background: $light-bg;
+  height: 100vh;
+}
+</style>

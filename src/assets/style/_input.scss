@@ -1,0 +1,67 @@
+.country-app-content {
+    margin-top: 5rem;
+  
+    &-input {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      & .search-icon {
+        position: absolute;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+        color: $light-input;
+      }
+      & input {
+        width: 30%;
+        padding: 12px 0;
+        padding-left: 50px;
+        &::placeholder {
+          color: $light-input;
+        }
+      }
+      & select {
+        padding: 12px 10px;
+        width: 12%;
+        color: $light-text;
+        font-weight: 600;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .country-app-content {
+      margin-top: 2rem;
+      &-input {
+        & input {
+          width: 50%;
+        }
+        & select {
+          width: 25%;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 415px) {
+    .country-app-content {
+      &-input {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: relative;
+        & .search-icon {
+          display: none;
+        }
+        & input {
+          width: 100%;
+          padding-left: 15px;
+        }
+        & select {
+          width: 50%;
+          margin-top: 10px;
+        }
+      }
+    }
+  }

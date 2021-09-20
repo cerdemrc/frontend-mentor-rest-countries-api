@@ -1,6 +1,6 @@
 <template>
-  <div class="container-lg container-md container-sm">
-    <div class="country-app-card-list col-lg col-md col-sm">
+  <div class="container">
+    <div class="country-app-card-list">
       <Card
         v-for="country in foundCountryList"
         :key="country.id"
@@ -39,7 +39,8 @@ export default {
 
 <style lang="scss">
 .country-app-card-list {
-  display: grid;
-  margin-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 </style>

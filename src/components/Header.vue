@@ -3,7 +3,7 @@
     class="country-app-wrapper"
     :class="darkMode ? 'dark-element' : 'light-element'"
   >
-    <div class="container-lg container-md container-sm">
+    <div class="container">
       <div
         class="country-app-header"
         :class="darkMode ? 'dark-text' : 'light-text'"

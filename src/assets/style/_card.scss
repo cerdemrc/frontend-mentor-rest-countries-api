@@ -1,4 +1,6 @@
 .country-app-card {
+    flex: 0 1 calc(25% - 1em);
+    margin-top: 5rem;
     border-radius: 10px;
     box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.05);
     transform: translate(0, -1px);
@@ -35,3 +37,15 @@
       }
     }
   }
+
+@media screen and (max-width: 768px){
+    .country-app-card {
+        flex: 0 1 calc(50% - 1em);
+    }
+}
+
+@media screen and (max-width: 415px){
+    .country-app-card {
+        flex: 0 1 calc(100% - 1em);
+    }
+}

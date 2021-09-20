@@ -1,5 +1,5 @@
 <template>
-  <div class="container-lg container-md container-sm">
+  <div class="container">
     <div class="country-app-content">
       <div class="country-app-content-input">
         <input

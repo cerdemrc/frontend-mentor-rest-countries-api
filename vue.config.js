@@ -5,6 +5,7 @@
             prependData: `
                 @import "@/assets/scss/_common.scss";
                 @import "@/assets/scss/_colors.scss";
+                @import "@/assets/scss/_grid.scss";
             `,
         },
       },

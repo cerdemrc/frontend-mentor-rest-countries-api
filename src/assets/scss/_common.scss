@@ -18,11 +18,6 @@ html, body{
     -webkit-font-smoothing: antialiased;
 }
 
-.container-lg{
-    max-width: 1440px;
-    margin: 0 auto;
-}
-
 a{
     text-decoration: none;
 }
@@ -33,33 +28,4 @@ input, select{
     outline: none;
     border: none;
     font-family: "Nunito Sans", sans-serif;
-}
-
-.col-lg{
-    grid-template-columns: auto auto auto auto;
-    grid-gap: 5rem;
-}
-
-@media screen and (max-width: 768px){
-    .col-md{
-        grid-template-columns: auto auto;
-        grid-gap: 3rem;
-    }
-    .container-md{
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 0 10px;
-    }
-}
-
-@media screen and (max-width: 415px){
-    .col-sm{
-        grid-template-columns: auto;
-        grid-gap: 5rem;
-    }
-    .container-sm{
-        max-width: 375px;
-        margin: 0 auto;
-        padding: 0 10px;
-    }
 }

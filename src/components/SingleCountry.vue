@@ -1,7 +1,7 @@
 <template>
   <div class="main-cage" :class="darkMode ? 'dark-bg' : 'light-bg'">
     <Header />
-    <div class="container-lg container-md container-sm">
+    <div class="container">
       <div class="back-button">
         <router-link
           to="/"

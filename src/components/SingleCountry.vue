@@ -2,11 +2,15 @@
   <div class="main-cage" :class="darkMode ? 'dark-bg' : 'light-bg'">
     <Header />
     <div class="container-lg container-md container-sm">
-      <div class="back-button" @click="this.$router.go(-1)">
-        <a href="#" :class="darkMode ? 'dark-button' : 'light-button'"
-          ><ion-icon class="arrow-icon" name="arrow-back-outline"></ion-icon>
-          Back</a
+      <div class="back-button">
+        <router-link
+          to="/"
+          tag="a"
+          :class="darkMode ? 'dark-button' : 'light-button'"
         >
+          <ion-icon class="arrow-icon" name="arrow-back-outline"></ion-icon>
+          Back
+        </router-link>
       </div>
       <div class="single-country">
         <div

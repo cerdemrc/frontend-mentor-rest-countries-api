@@ -21,68 +21,74 @@
             <img :src="countryInfos.flags.svg" />
           </div>
           <div class="single-country-infos-content">
-            <h1 class="single-country-infos-content-title">
-              {{ countryInfos.name.common }}
-            </h1>
-            <div class="single-country-infos-content-subtitle">
-              <div class="single-country-infos-content-subtitle-left">
-                <h4>
-                  <strong>Native Name: </strong>
-                  <span
-                    class="native-name"
-                    v-for="nativeName in countryInfos.name.nativeName"
-                    :key="nativeName"
-                  >
-                    {{ nativeName.official }}
+            <div class="container">
+              <h1 class="single-country-infos-content-title">
+                {{ countryInfos.name.common }}
+              </h1>
+              <div class="single-country-infos-content-subtitle">
+                <div class="container">
+                  <div class="single-country-infos-content-subtitle-left">
+                    <h4>
+                      <strong>Native Name: </strong>
+                      <span
+                        class="native-name"
+                        v-for="nativeName in countryInfos.name.nativeName"
+                        :key="nativeName"
+                      >
+                        {{ nativeName.official }}
+                      </span>
+                    </h4>
+                    <h4>
+                      <strong>Population:</strong> {{ countryInfos.population }}
+                    </h4>
+                    <h4><strong>Region:</strong> {{ countryInfos.region }}</h4>
+                    <h4>
+                      <strong>Sub Region:</strong> {{ countryInfos.subregion }}
+                    </h4>
+                    <h4>
+                      <strong>Capital: </strong>
+                      <span
+                        v-for="capital in countryInfos.capital"
+                        :key="capital"
+                        >{{ capital }}</span
+                      >
+                    </h4>
+                  </div>
+                  <div class="single-country-infos-content-subtitle-right">
+                    <h4>
+                      <strong>Top Level Domain: </strong>
+                      <span v-for="domain in countryInfos.tld" :key="domain">{{
+                        domain
+                      }}</span>
+                    </h4>
+                    <h4>
+                      <strong>Currencies: </strong>
+                      <span
+                        v-for="currency in countryInfos.currencies"
+                        :key="currency"
+                        >{{ currency.name }}</span
+                      >
+                    </h4>
+                    <h4>
+                      <strong>Languages: </strong>
+                      <span
+                        class="language-name"
+                        v-for="language in countryInfos.languages"
+                        :key="language"
+                        >{{ language }}</span
+                      >
+                    </h4>
+                  </div>
+                </div>
+              </div>
+              <div class="single-country-infos-content-countries">
+                <div class="container">
+                  <h4><strong>Border Countries: </strong></h4>
+                  <span v-for="border in countryInfos.borders" :key="border">
+                    <a>{{ border }}</a>
                   </span>
-                </h4>
-                <h4>
-                  <strong>Population:</strong> {{ countryInfos.population }}
-                </h4>
-                <h4><strong>Region:</strong> {{ countryInfos.region }}</h4>
-                <h4>
-                  <strong>Sub Region:</strong> {{ countryInfos.subregion }}
-                </h4>
-                <h4>
-                  <strong>Capital: </strong>
-                  <span
-                    v-for="capital in countryInfos.capital"
-                    :key="capital"
-                    >{{ capital }}</span
-                  >
-                </h4>
+                </div>
               </div>
-              <div class="single-country-infos-content-subtitle-right">
-                <h4>
-                  <strong>Top Level Domain: </strong>
-                  <span v-for="domain in countryInfos.tld" :key="domain">{{
-                    domain
-                  }}</span>
-                </h4>
-                <h4>
-                  <strong>Currencies: </strong>
-                  <span
-                    v-for="currency in countryInfos.currencies"
-                    :key="currency"
-                    >{{ currency.name }}</span
-                  >
-                </h4>
-                <h4>
-                  <strong>Languages: </strong>
-                  <span
-                    class="language-name"
-                    v-for="language in countryInfos.languages"
-                    :key="language"
-                    >{{ language }}</span
-                  >
-                </h4>
-              </div>
-            </div>
-            <div class="single-country-infos-content-countries">
-              <h4><strong>Border Countries: </strong></h4>
-              <span v-for="border in countryInfos.borders" :key="border">
-                <a>{{ border }}</a>
-              </span>
             </div>
           </div>
         </div>

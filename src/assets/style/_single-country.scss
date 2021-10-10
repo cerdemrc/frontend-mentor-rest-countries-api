@@ -18,8 +18,8 @@
         color: $light-text;
       }
     }
-  }
-  .single-country {
+}
+.single-country {
     margin: 6rem;
     padding-bottom: 10rem;
     &-infos {
@@ -80,9 +80,9 @@
         }
       }
     }
-  }
+}
 
-  @media screen and (max-width: 1100px) {
+@media screen and (max-width: 1100px) {
     .back-button {
         margin-top: 3rem;
         & a {
@@ -106,4 +106,10 @@
           }
         }
     }
-  }
+}
+
+@media screen and (max-width: 1100px) {
+    .back-button a {
+        width: 30%;
+    }
+}

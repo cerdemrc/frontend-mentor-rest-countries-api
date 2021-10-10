@@ -18,16 +18,23 @@
           :class="darkMode ? 'dark-text' : 'light-text'"
         >
           <div class="single-country-infos-flag">
-            <img :src="countryInfos.flag" />
+            <img :src="countryInfos.flags.svg" />
           </div>
           <div class="single-country-infos-content">
             <h1 class="single-country-infos-content-title">
-              {{ countryInfos.name }}
+              {{ countryInfos.name.common }}
             </h1>
             <div class="single-country-infos-content-subtitle">
               <div class="single-country-infos-content-subtitle-left">
                 <h4>
-                  <strong>Native Name:</strong> {{ countryInfos.nativeName }}
+                  <strong>Native Name: </strong>
+                  <span
+                    class="native-name"
+                    v-for="nativeName in countryInfos.name.nativeName"
+                    :key="nativeName"
+                  >
+                    {{ nativeName.official }}
+                  </span>
                 </h4>
                 <h4>
                   <strong>Population:</strong> {{ countryInfos.population }}
@@ -36,16 +43,21 @@
                 <h4>
                   <strong>Sub Region:</strong> {{ countryInfos.subregion }}
                 </h4>
-                <h4><strong>Capital:</strong> {{ countryInfos.capital }}</h4>
+                <h4>
+                  <strong>Capital: </strong>
+                  <span
+                    v-for="capital in countryInfos.capital"
+                    :key="capital"
+                    >{{ capital }}</span
+                  >
+                </h4>
               </div>
               <div class="single-country-infos-content-subtitle-right">
                 <h4>
                   <strong>Top Level Domain: </strong>
-                  <span
-                    v-for="domain in countryInfos.topLevelDomain"
-                    :key="domain"
-                    >{{ domain }}</span
-                  >
+                  <span v-for="domain in countryInfos.tld" :key="domain">{{
+                    domain
+                  }}</span>
                 </h4>
                 <h4>
                   <strong>Currencies: </strong>
@@ -58,9 +70,10 @@
                 <h4>
                   <strong>Languages: </strong>
                   <span
+                    class="language-name"
                     v-for="language in countryInfos.languages"
                     :key="language"
-                    >{{ language.name }}</span
+                    >{{ language }}</span
                   >
                 </h4>
               </div>

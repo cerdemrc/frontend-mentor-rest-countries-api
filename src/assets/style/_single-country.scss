@@ -54,6 +54,14 @@
           margin-top: 2rem;
           &-left {
             padding-right: 15rem;
+            & .native-name + .native-name:before{
+                content: ", "
+              }
+          }
+          &-right{
+              & .language-name + .language-name:before{
+                content: ", "
+              }
           }
         }
         &-countries{
